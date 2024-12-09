@@ -19,7 +19,7 @@ body{
 }
 .links{
     padding: 10px;
-    margin-top: 1%  ;
+    margin-top: 10px;
 }
 .links a::after {
     content: '';
@@ -45,7 +45,8 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-basis: auto;
+    flex-basis: auto;   
+    height: 100vh;
 }
 .left-column{
     height: 100%;
@@ -103,4 +104,78 @@ body{
         height: auto;
         transform: scale(1);
     }
+}
+
+/*---This is Section 2 of the WebPage*/
+.section-2{ 
+    height: 100vh;
+    width: 100vw;
+    position: relative; 
+    margin-top: 10px;
+}
+.aboutMe{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.aboutMe h1{
+    text-align: center;
+    border-bottom: 2px solid red;
+}
+.aboutMe p{
+    font-size: 1em;
+    color: rgba(202, 202, 202, 0.832);
+}
+.tabs{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    color: white;
+}
+.tab {
+    margin: 0px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+}
+.tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease;
+}
+
+.tab:hover::after {
+    width: 100%;
+}
+.tab.active::after {
+    width: 100%;
+    transition: none; 
+}
+.content{
+    width: 20vw;
+    transform: translateX(620px);
+    display: none;
+    position: relative;
+    text-align: left;
+    margin: 4px;
+    padding: 0 20px;
+}
+.content h5{
+    color: rgb(241, 54, 54);
+    font-size: 1em;
+}
+.content p{
+    color: rgba(202, 202, 202, 0.832);
+}
+.image img{
+    width: 200px;
 }
