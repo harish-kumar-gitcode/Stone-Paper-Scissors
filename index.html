@@ -1,78 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>RPS Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--This is the header section-->
-    <div class="container">
+    
+    <h1>Rock Paper Scissors</h1>
 
-        <div class="links"><a href="#">About Me</a></div>
-        <div class="links"><a href="#">Project's</a></div>
-    </div>
-    <!--This is the Welcome section-->
-    <div class="section-1">
-            <div class="left-column">
-            <h2>Welcome to my <span>Portfolio</span> Website</h2>
+    <div class="choices">   
 
-            </div>
-
-            <div class="right-column">
-            <img src="./Media/Image-1-remove.png">
-
-            </div>
-    </div>
-    <!--This is the Info section-->
-    <div class="section-2">
-
-        <div class="aboutMe">
-            <h1>About Me</h1>
-            <p>I am a Front-End Developer who is looking for sustainable growth in the growing Information & Technology field.</p>
-        </div><br><br>
-
-        
-        <div class="tabs">
-
-            <div class="tab" onclick="openTab('skills')">Skills</div>
-            <div class="tab" onclick="openTab('education')">Education</div>
-            <div class="tab" onclick="openTab('experience')">Experience</div>
-        </div>
-        
-        <!--Skills Section-->
-        <div id="skills" class="content">
-
-            <h5>Languages</h5>
-            <p>HTML, CSS, JavaScript, React.js</p>
-            <h5>Web Designing</h5>
-            <p>Create unified designs.</p>
-            <h5>Web Development</h5>
-            <p>creating user-friendly and responsive designs.</p>
-        </div>
-
-        <!--Education Section-->
-        <div id="education" class="content">
-
-            <h5>10th SSLC</h5>
-            <p>Oxford English High School (Completed in 2019)</p>
-            <h5>12th PUC</h5>
-            <p>Miranda Composite PU College(2019-2021)</p>
-            <h5>B.E (EEE)</h5>
-            <p>BMS Institute Of Technology & Management (2021-2025)</p>
-        </div>
-
-        <!--Experience Section-->
-        <div id="experience" class="content">
-
-            <h5>Fresher</h5>
-            <p>Fresher with the required skill sets</p>
-        </div>
-        </div>  
+        <button onclick="playGame('rock')">👊</button>
+        <button onclick="playGame('paper')">✋</button>
+        <button onclick="playGame('scissors')">✌</button>
     </div>
 
+        <div id="playerDisplay"></div>
+        <div id="computerDisplay"></div>
+        <div id="resultDisplay"></div>
     <script src="index.js"></script>
 </body>
 </html>

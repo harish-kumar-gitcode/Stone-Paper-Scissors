@@ -1,24 +1,34 @@
-function openTab(tabName) {
+//Rock - Paper - Scissors
 
-    // Hide all content sections
-    const contentSections = document.querySelectorAll('.content');
-    contentSections.forEach(section => {
-        section.style.display = 'none';
-    });
+ const choices =["rock", "paper", "scissors"];
+ const playerDisplay = document.getElementById("playerDisplay");
+ const computerDisplay = document.getElementById("computerDisplay");
+ const resultDisplay = document.getElementById("resultDisplay");
 
-    // Show the clicked tab's corresponding section
-    const selectedTab = document.getElementById(tabName);
-    selectedTab.style.display = 'block';
+ function playGame(playerChoice){
 
-    // Get all tabs
-    const tabs = document.querySelectorAll('.tab');
+    const computerChoice = choices[Math.floor(Math.random() * 3)];
+    let result = "";
 
-    // Remove 'active' class from all tabs
-    tabs.forEach(tab => {
-        tab.classList.remove('active');
-    });
+    if(playerChoice === computerChoice){
+        result = "IT'S A TIE 🤝";
+    }
+    else{
 
-    // Add 'active' class to the clicked tab
-    const clickedTab = event.target;
-    clickedTab.classList.add('active');
-};
+        switch(playerChoice){
+
+            case "rock" :
+            result = (computerChoice === "scissors") ? "YOU WIN!🎉" : "YOU LOSE😟";
+            break;
+            case "paper" :
+            result = (computerChoice === "rock") ? "YOU WIN!🎉" : "YOU LOSE😟";
+            break;
+            case "scissors" :
+            result = (computerChoice === "paper") ? "YOU WIN!🎉" : "YOU LOSE😟";
+            break;
+        }
+    }
+    playerDisplay.textContent = `PLAYER: ${playerChoice.toUpperCase()}`;
+    computerDisplay.textContent = `COMPUTER: ${computerChoice.toUpperCase()}`;
+    resultDisplay.textContent = `RESULT: ${result}`;
+ }
